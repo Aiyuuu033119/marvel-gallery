@@ -1,303 +1,503 @@
 class MarvelInfos {
-  int position;
+  int id;
+  String codeName;
   String name;
   String type;
+  int icon;
   String iconImage;
-  String description;
+  dynamic description;
   List<String> images;
+  List<String> url;
 
-  MarvelInfos(
-      {this.position,
-      this.name,
-      this.type,
-      this.iconImage,
-      this.description,
-      this.images});
+  MarvelInfos({
+    this.id,
+    this.codeName,
+    this.name,
+    this.type,
+    this.icon,
+    this.iconImage,
+    this.description,
+    this.images,
+    this.url,
+  });
 }
 
 List<MarvelInfos> marvels = [
   MarvelInfos(
-      position: 1,
-      name: 'Iron Man',
-      type: 'Avengers',
-      iconImage: 'assets/iron-man.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/iron-man.png',
-        'assets/iron-man.png',
-        'assets/iron-man.png'
-      ]),
+    id: 0,
+    codeName: 'Iron Man',
+    name: 'Tony Stark',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/iron-man.png',
+    description:
+        'Genius. Billionaire. Philanthropist. Tony Stark’s confidence is only matched by his high-flying abilities as the hero called Iron Man.',
+    images: ['assets/carousel/iron-man-1.png', 'assets/carousel/iron-man-2.png', 'assets/carousel/iron-man-3.png'],
+    url: ['https://www.marvel.com/characters/iron-man-tony-stark'],
+  ),
   MarvelInfos(
-      position: 2,
-      name: 'Captain America',
-      type: 'Avengers',
-      iconImage: 'assets/captain-america.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/captain-america.png',
-        'assets/captain-america.png',
-        'assets/captain-america.png'
-      ]),
+    id: 1,
+    codeName: 'Captain America',
+    name: 'Steve Rogers',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/captain-america.png',
+    description:
+        'Recipient of the Super Soldier serum, World War II hero Steve Rogers fights for American ideals as one of the world’s mightiest heroes and the leader of the Avengers.',
+    images: ['assets/carousel/captain-america-1.png', 'assets/carousel/captain-america-2.png', 'assets/carousel/captain-america-3.png'],
+    url: ['https://www.marvel.com/characters/captain-america-steve-rogers'],
+  ),
   MarvelInfos(
-      position: 3,
-      name: 'Winter Soldier',
-      type: 'Avengers',
-      iconImage: 'assets/winter-soldier.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/winter-soldier.png',
-        'assets/winter-soldier.png',
-        'assets/winter-soldier.png'
-      ]),
+    id: 2,
+    codeName: 'Black Widow',
+    name: 'Natasha Romanoff',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/black-widow.png',
+    description:
+        'A deadly assassin is closing in on Natasha Romanoff. Now Natasha must reunite with an unlikely group of spies from her past in order to survive and stop a lethal force from being unleashed on the world.',
+    images: ['assets/carousel/black-widow-1.png', 'assets/carousel/black-widow-2.png', 'assets/carousel/black-widow-3.png'],
+    url: ['https://www.marvel.com/characters/black-widow-natasha-romanoff'],
+  ),
   MarvelInfos(
-      position: 4,
-      name: 'Hulk',
-      type: 'Avengers',
-      iconImage: 'assets/hulk.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/hulk.png', 'assets/hulk.png', 'assets/hulk.png']),
+    id: 3,
+    codeName: 'Winter Soldier',
+    name: 'Bucky Barnes',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/winter-soldier.png',
+    description:
+        'A brave soldier, Barnes fights valiantly, but eventually literally falls in battle. Unfortunately, it is the evil Arnim Zola who recovers him, erases his memory and turns him into a highly-trained, but mindless assassin called the Winter Soldier.',
+    images: ['assets/carousel/winter-soldier-1.png', 'assets/carousel/winter-soldier-2.png', 'assets/carousel/winter-soldier-3.png'],
+    url: ['https://www.marvel.com/characters/winter-soldier-bucky-barnes'],
+  ),
   MarvelInfos(
-      position: 5,
-      name: 'Thor',
-      type: 'Avengers',
-      iconImage: 'assets/thor.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/thor.png', 'assets/thor.png', 'assets/thor.png']),
+    id: 4,
+    codeName: 'Hulk',
+    name: 'Bruce Banner',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/hulk.png',
+    description: 'Exposed to heavy doses of gamma radiation, scientist Bruce Banner transforms into the mean, green rage machine called the Hulk.',
+    images: ['assets/carousel/hulk-1.png', 'assets/carousel/hulk-2.png', 'assets/carousel/hulk-3.png'],
+    url: ['https://www.marvel.com/characters/hulk-bruce-banner'],
+  ),
   MarvelInfos(
-      position: 6,
-      name: 'Captain Marvel',
-      type: 'Avengers',
-      iconImage: 'assets/captain-marvel.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/captain-marvel.png',
-        'assets/captain-marvel.png',
-        'assets/captain-marvel.png'
-      ]),
+    id: 5,
+    codeName: 'Thor',
+    name: 'Thor Odinson',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/thor.png',
+    description: 'Thor Odinson wields the power of the ancient Asgardians to fight evil throughout the Nine Realms and beyond.',
+    images: ['assets/carousel/thor-1.png', 'assets/carousel/thor-2.png', 'assets/carousel/thor-3.png'],
+    url: ['https://www.marvel.com/characters/thor-thor-odinson'],
+  ),
   MarvelInfos(
-      position: 7,
-      name: 'Doctor Strange',
-      type: 'Avengers',
-      iconImage: 'assets/doctor-strange.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/doctor-strange.png',
-        'assets/doctor-strange.png',
-        'assets/doctor-strange.png'
-      ]),
+    id: 6,
+    codeName: 'Captain Marvel',
+    name: 'Carol Danvers',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/captain-marvel.png',
+    description:
+        'Carol Danvers becomes one of the universe’s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races.',
+    images: ['assets/carousel/captain-marvel-1.png', 'assets/carousel/captain-marvel-2.png', 'assets/carousel/captain-marvel-3.png'],
+    url: ['https://www.marvel.com/characters/captain-marvel-carol-danvers'],
+  ),
   MarvelInfos(
-      position: 8,
-      name: 'Black Panther',
-      type: 'Avengers',
-      iconImage: 'assets/black-panther.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/black-panther.png',
-        'assets/black-panther.png',
-        'assets/black-panther.png'
-      ]),
+    id: 7,
+    codeName: 'Doctor Strange',
+    name: 'Stephen Strange',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/doctor-strange.png',
+    description:
+        'Formerly a renowned surgeon, Doctor Stephen Strange now serves as the Sorcerer Supreme—Earth’s foremost protector against magical and mystical threats.',
+    images: ['assets/carousel/doctor-strange-1.png', 'assets/carousel/doctor-strange-2.png', 'assets/carousel/doctor-strange-3.png'],
+    url: ['https://www.marvel.com/characters/doctor-strange-stephen-strange'],
+  ),
   MarvelInfos(
-      position: 9,
-      name: 'Spider Man',
-      type: 'Avengers',
-      iconImage: 'assets/spiderman.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/spiderman.png',
-        'assets/spiderman.png',
-        'assets/spiderman.png'
-      ]),
+    id: 8,
+    codeName: 'Black Panther',
+    name: 'T’Challa',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/black-panther.png',
+    description:
+        'T’Challa is the king of the secretive and highly advanced African nation of Wakanda - as well as the powerful warrior known as the Black Panther.',
+    images: ['assets/carousel/black-panther-1.png', 'assets/carousel/black-panther-2.png', 'assets/carousel/black-panther-3.png'],
+    url: ['https://www.marvel.com/characters/black-panther-t-challa'],
+  ),
   MarvelInfos(
-      position: 10,
-      name: 'Spider Man',
-      type: 'Avengers',
-      iconImage: 'assets/spiderman-2.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/spiderman-2.png',
-        'assets/spiderman-2.png',
-        'assets/spiderman-2.png'
-      ]),
+    id: 9,
+    codeName: 'Ant-Man & The Wasp',
+    name: 'Scott Lang & Hope Van Dyne',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/antman-&-wasp.png',
+    description: [
+      "Thief turned hero Scott Lang uses size manipulation tech to infiltrate bases and intimidate bad guys. Whether he’s commanding an insect army or standing tall at 65 feet, Scott’s always trying to do the right thing now that he’s Ant-Man.",
+      "Hope Van Dyne, daughter of the brilliant and heroic Ant-Man (Hank Pym) and The Wasp (Janet van Dyne), helps trains her father’s successor Scott Lang and secure the destruction of the Yellowjacket technology."
+    ],
+    images: ['assets/carousel/antman-&-wasp-1.png', 'assets/carousel/antman-&-wasp-2.png', 'assets/carousel/antman-&-wasp-3.png'],
+    url: ['https://www.marvel.com/characters/ant-man-scott-lang', 'https://www.marvel.com/characters/hope-van-dyne'],
+  ),
   MarvelInfos(
-      position: 11,
-      name: 'Antman & Wasp',
-      type: 'Avengers',
-      iconImage: 'assets/antman-&-wasp.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/antman-&-wasp.png',
-        'assets/antman-&-wasp.png',
-        'assets/antman-&-wasp.png'
-      ]),
+    id: 10,
+    codeName: 'Spider Man',
+    name: 'Peter Parker',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/spiderman.png',
+    description:
+        'Bitten by a radioactive spider, Peter Parker’s arachnid abilities give him amazing powers he uses to help others, while his personal life continues to offer plenty of obstacles.',
+    images: ['assets/carousel/spiderman-1.png', 'assets/carousel/spiderman-2.png', 'assets/carousel/spiderman-3.png'],
+    url: ['https://www.marvel.com/characters/spider-man-peter-parker'],
+  ),
   MarvelInfos(
-      position: 12,
-      name: 'Daredevil',
-      type: 'Avengers',
-      iconImage: 'assets/daredevil.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/daredevil.png',
-        'assets/daredevil.png',
-        'assets/daredevil.png'
-      ]),
+    id: 11,
+    codeName: 'Spider Man',
+    name: 'Miles Morales',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/spiderman-2.png',
+    description:
+        'Bitten by a radioactive spider, Peter Parker’s arachnid abilities give him amazing powers he uses to help others, while his personal life continues to offer plenty of obstacles.',
+    images: ['assets/carousel/spiderman-miles-1.png', 'assets/carousel/spiderman-miles-2.png', 'assets/carousel/spiderman-miles-3.png'],
+    url: ['https://www.marvel.com/characters/spider-man-miles-morales'],
+  ),
   MarvelInfos(
-      position: 13,
-      name: 'Iron Fist',
-      type: 'Avengers',
-      iconImage: 'assets/iron-fist.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/iron-fist.png',
-        'assets/iron-fist.png',
-        'assets/iron-fist.png'
-      ]),
+    id: 12,
+    codeName: 'Ghost-Spider',
+    name: 'Gwen Stacy',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/spider-gwen.png',
+    description:
+        'Gwen was bitten by a radioactive spider and gained spider-like powers. Influenced by her father’s moral code, Gwen uses her powers to help those in need like her friend, Peter Parker.',
+    images: ['assets/carousel/spider-gwen-1.png', 'assets/carousel/spider-gwen-2.png', 'assets/carousel/spider-gwen-3.png'],
+    url: ['https://www.marvel.com/characters/ghost-spider-gwen-stacy'],
+  ),
   MarvelInfos(
-      position: 14,
-      name: 'Punisher',
-      type: 'Avengers',
-      iconImage: 'assets/punisher.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/punisher.png',
-        'assets/punisher.png',
-        'assets/punisher.png'
-      ]),
+    id: 13,
+    codeName: 'Silk',
+    name: 'Cindy Moon',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/silk.png',
+    description:
+        'Empowered by an irradiated spider bite and hidden in a bunker for a decade, Silk emerges as a Super Hero ready to fight crime and take back her life.',
+    images: ['assets/carousel/silk-1.png', 'assets/carousel/silk-2.png', 'assets/carousel/silk-3.png'],
+    url: ['https://www.marvel.com/characters/silk-cindy-moon'],
+  ),
   MarvelInfos(
-      position: 15,
-      name: 'Colusos',
-      type: 'X-Men',
-      iconImage: 'assets/colusos.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/colusos.png',
-        'assets/colusos.png',
-        'assets/colusos.png'
-      ]),
+    id: 14,
+    codeName: 'Squirrel Girl',
+    name: 'Doreen Green',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/squirrel-girl.png',
+    description:
+        'Doreen’s fun-loving, goofy persona comes naturally to her, but is also a great way to keep fear and anxiety at bay when the fate of the world hangs in the balance.',
+    images: ['assets/carousel/squirrel-girl-1.png', 'assets/carousel/squirrel-girl-2.png', 'assets/carousel/squirrel-girl-3.png'],
+    url: ['https://www.marvel.com/characters/squirrel-girl-doreen-green'],
+  ),
   MarvelInfos(
-      position: 16,
-      name: 'Deadpool',
-      type: 'X-Men',
-      iconImage: 'assets/deadpool.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/deadpool.png',
-        'assets/deadpool.png',
-        'assets/deadpool.png'
-      ]),
+    id: 15,
+    codeName: 'The Punisher',
+    name: 'Frank Castle',
+    type: 'Avengers',
+    icon: 1,
+    iconImage: 'assets/punisher.png',
+    description:
+        'Traumatized by horrific events both at home and abroad, Frank Castle becomes The Punisher, using the lethal skills he honed as a Marine to exact violent vengeance on those he deems responsible for the death of his family.',
+    images: ['assets/carousel/punisher-1.png', 'assets/carousel/punisher-2.png', 'assets/carousel/punisher-3.png'],
+    url: ['https://www.marvel.com/characters/punisher-frank-castle'],
+  ),
   MarvelInfos(
-      position: 17,
-      name: 'Gambit',
-      type: 'X-Men',
-      iconImage: 'assets/gambit.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/gambit.png', 'assets/gambit.png', 'assets/gambit.png']),
+    id: 16,
+    codeName: 'Daredevil',
+    name: 'Matt Murdock',
+    type: 'Defenders',
+    icon: 6,
+    iconImage: 'assets/daredevil.png',
+    description: 'Blinded in a childhood accident, attorney-at-law Matt Murdock protects Hell’s Kitchen as the masked vigilante, Daredevil.',
+    images: ['assets/carousel/daredevil-1.png', 'assets/carousel/daredevil-2.png', 'assets/carousel/daredevil-3.png'],
+    url: ['https://www.marvel.com/characters/daredevil-matthew-murdock'],
+  ),
   MarvelInfos(
-      position: 18,
-      name: 'Magneto',
-      type: 'X-Men/Villain',
-      iconImage: 'assets/magneto.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/magneto.png',
-        'assets/magneto.png',
-        'assets/magneto.png'
-      ]),
+    id: 17,
+    codeName: 'Iron Fist',
+    name: 'Danny Rand',
+    type: 'Defenders',
+    icon: 6,
+    iconImage: 'assets/iron-fist.png',
+    description: 'Billionaire Danny Rand is the Immortal Iron Fist, protector of the mystical city of K’un-Lun and sworn enemy of the Hand.',
+    images: ['assets/carousel/iron-fist-1.png', 'assets/carousel/iron-fist-2.png', 'assets/carousel/iron-fist-3.png'],
+    url: ['https://www.marvel.com/characters/iron-fist-danny-rand'],
+  ),
   MarvelInfos(
-      position: 19,
-      name: 'Rogue',
-      type: 'X-Men',
-      iconImage: 'assets/rogue.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/rogue.png', 'assets/rogue.png', 'assets/rogue.png']),
+    id: 18,
+    codeName: 'Luke Cage',
+    type: 'Defenders',
+    icon: 6,
+    iconImage: 'assets/luke-cage.png',
+    description:
+        'Incarcerated for a crime he didn’t commit, the man who would become known as Luke Cage underwent a procedure that gave him incredible strength and bulletproof skin.',
+    images: ['assets/carousel/luke-cage-1.png', 'assets/carousel/luke-cage-2.png', 'assets/carousel/luke-cage-3.png'],
+    url: ['https://www.marvel.com/characters/luke-cage'],
+  ),
   MarvelInfos(
-      position: 20,
-      name: 'Wolverine',
-      type: 'X-Men',
-      iconImage: 'assets/wolverine.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/wolverine.png',
-        'assets/wolverine.png',
-        'assets/wolverine.png'
-      ]),
+    id: 19,
+    codeName: 'Star-Lord',
+    name: 'Peter Quill',
+    type: 'Guardians of the Galaxy',
+    icon: 3,
+    iconImage: 'assets/star-lord.png',
+    description:
+        'Leader of the Guardians of the Galaxy, Peter Quill, known as Star-Lord, brings a sassy sense of humor while protecting the universe from any and all threats.',
+    images: ['assets/carousel/star-lord-1.png', 'assets/carousel/star-lord-2.png', 'assets/carousel/star-lord-3.png'],
+    url: ['https://www.marvel.com/characters/star-lord-peter-quill'],
+  ),
   MarvelInfos(
-      position: 21,
-      name: 'Drax',
-      type: 'Guardian of the Galaxy',
-      iconImage: 'assets/drax.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/drax.png', 'assets/drax.png', 'assets/drax.png']),
+    id: 20,
+    codeName: 'Gamora',
+    type: 'Guardians of the Galaxy',
+    icon: 3,
+    iconImage: 'assets/gamora.png',
+    description:
+        'Gamora is a trained warrior assassin, whose life under her adoptive father Thanos’ torturous wrath leads her to turn against him. Realizing the universe is threatened by powerful Infinity Stones, she takes up the mantle of Guardians of the Galaxy.',
+    images: ['assets/carousel/gamora-1.png', 'assets/carousel/gamora-2.png', 'assets/carousel/gamora-3.png'],
+    url: ['https://www.marvel.com/characters/gamora'],
+  ),
   MarvelInfos(
-      position: 22,
-      name: 'Gamora',
-      type: 'Guardians of the Galaxy',
-      iconImage: 'assets/gamora.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/gamora.png', 'assets/gamora.png', 'assets/gamora.png']),
+    id: 21,
+    codeName: 'Rocket',
+    name: 'Rocket Racoon',
+    type: 'Guardians of the Galaxy',
+    icon: 3,
+    iconImage: 'assets/rocket-racoon.png',
+    description: 'As the weapons and tactical expert of the Guardians of the Galaxy, Rocket risks his hide to defend the cosmos.',
+    images: ['assets/carousel/rocket-racoon-1.png', 'assets/carousel/rocket-racoon-2.png', 'assets/carousel/rocket-racoon-3.png'],
+    url: ['https://www.marvel.com/characters/rocket'],
+  ),
   MarvelInfos(
-      position: 23,
-      name: 'Groot',
-      type: 'Guardian of the Galaxy',
-      iconImage: 'assets/groot.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/groot.png', 'assets/groot.png', 'assets/groot.png']),
+    id: 22,
+    codeName: 'Groot',
+    type: 'Guardians of the Galaxy',
+    icon: 3,
+    iconImage: 'assets/groot.png',
+    description:
+        'This sentient alien tree branches out of his comfort zone to help the Guardians of the Galaxy keep the people of the universe safe.',
+    images: ['assets/carousel/groot-1.png', 'assets/carousel/groot-2.png', 'assets/carousel/groot-3.png'],
+    url: ['https://www.marvel.com/characters/groot'],
+  ),
   MarvelInfos(
-      position: 24,
-      name: 'Yondu',
-      type: 'Guardian of the Galaxy',
-      iconImage: 'assets/yondu.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/yondu.png', 'assets/yondu.png', 'assets/yondu.png']),
+    id: 23,
+    codeName: 'Drax',
+    type: 'Guardians of the Galaxy',
+    icon: 3,
+    iconImage: 'assets/drax.png',
+    description:
+        'Drax is a brutish, battle-tested warrior. A former intergalactic criminal, Drax has no interest in money, only avenging his slain family. Reluctant at first, the hero with an unquenchable murderous rage joins the Guardians of the Galaxy.',
+    images: ['assets/carousel/drax-1.png', 'assets/carousel/drax-2.png', 'assets/carousel/drax-3.png'],
+    url: ['https://www.marvel.com/characters/drax'],
+  ),
   MarvelInfos(
-      position: 25,
-      name: 'Carnage',
-      type: 'Villain',
-      iconImage: 'assets/carnage.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: [
-        'assets/carnage.png',
-        'assets/carnage.png',
-        'assets/carnage.png'
-      ]),
+    id: 24,
+    codeName: 'Yondu',
+    type: 'Guardians of the Galaxy',
+    icon: 3,
+    iconImage: 'assets/yondu.png',
+    description: 'Space pirate Yondu Udonta leads his group of Ravagers across the galaxy, always looking for his next big score.',
+    images: ['assets/carousel/yondu-1.png', 'assets/carousel/yondu-2.png', 'assets/carousel/yondu-3.png'],
+    url: ['https://www.marvel.com/characters/yondu'],
+  ),
   MarvelInfos(
-      position: 26,
-      name: 'Modok',
-      type: 'Villains',
-      iconImage: 'assets/modok.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/modok.png', 'assets/modok.png', 'assets/modok.png']),
+    id: 25,
+    codeName: 'Wolverine',
+    name: 'James Howlett',
+    icon: 2,
+    type: 'X-Men',
+    iconImage: 'assets/wolverine2.png',
+    description:
+        'A mutant with an unstoppable healing power, adamantium metal claws and no-nonsense attitude makes the man called Logan, one of the most ferocious heroes in the universe.',
+    images: ['assets/carousel/wolverine-1.png', 'assets/carousel/wolverine-2.png', 'assets/carousel/wolverine-3.png'],
+    url: ['https://www.marvel.com/characters/wolverine-james-howlett'],
+  ),
   MarvelInfos(
-      position: 27,
-      name: 'Venom',
-      type: 'Villains',
-      iconImage: 'assets/venom.png',
-      description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
-      images: ['assets/venom.png', 'assets/venom.png', 'assets/venom.png']),
+    id: 26,
+    codeName: 'Deadpool',
+    name: 'Wade Wilson',
+    type: 'X-Men',
+    icon: 2,
+    iconImage: 'assets/deadpool2.png',
+    description:
+        'A mutant with an unstoppable healing power, adamantium metal claws and no-nonsense attitude makes the man called Logan, one of the most ferocious heroes in the universe.',
+    images: ['assets/carousel/deadpool-1.png', 'assets/carousel/deadpool-2.png', 'assets/carousel/deadpool-3.png'],
+    url: ['https://www.marvel.com/characters/deadpool-wade-wilson'],
+  ),
+  MarvelInfos(
+    id: 27,
+    codeName: 'Gwenpool',
+    name: 'Gwen Poole',
+    type: 'X-Men',
+    icon: 2,
+    iconImage: 'assets/gween-pool.png',
+    description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus purus egestas diam faucibus luctus. Quisque nec tellus vel metus lobortis tincidunt. Nam hendrerit feugiat faucibus. Curabitur bibendum diam mauris, eget porta massa maximus ut. Duis purus dui, condimentum vitae arcu ut, mattis convallis purus. Quisque vitae efficitur tortor. Sed ornare augue id eros facilisis, eget semper sapien blandit. ',
+    images: ['assets/carousel/gween-pool-1.png', 'assets/carousel/gween-pool-2.png', 'assets/carousel/gween-pool-3.png'],
+    url: ['https://www.marvel.com/characters/gwenpool'],
+  ),
+  MarvelInfos(
+    id: 28,
+    codeName: 'Cable',
+    name: 'Nathan Summers',
+    type: 'X-Men',
+    icon: 2,
+    iconImage: 'assets/cable.png',
+    description:
+        'Cable was sent to the future in a bid to save his life when he was infected by a techno-organic virus. Using his formidable telekinetic abilities and cybernetic enhancements, Cable battles Super Villain foes in his quest for peace.',
+    images: ['assets/carousel/cable-1.png', 'assets/carousel/cable-2.png', 'assets/carousel/cable-3.png'],
+    url: ['https://www.marvel.com/characters/cable-nathan-summers'],
+  ),
+  MarvelInfos(
+    id: 29,
+    codeName: 'Gambit',
+    name: 'Remy Lebeau',
+    type: 'X-Men',
+    icon: 2,
+    iconImage: 'assets/gambit.png',
+    description:
+        'Remy LeBeau has always straddled the line between his past and present life. Raised in the Thieves Guild of New Orleans, the Cajun was trained from childhood to be a perfect thief – illusive and charming. With the ability to charge objects with explosive energy, Gambit can turn a deck of cards into a loaded weapon. As an X-Man, he seeks redemption for sins past by playing an unlikely role – hero.',
+    images: ['assets/carousel/gambit-1.png', 'assets/carousel/gambit-2.png', 'assets/carousel/gambit-3.png'],
+    url: ['https://www.marvel.com/characters/gambit'],
+  ),
+  MarvelInfos(
+    id: 30,
+    codeName: 'Rogue',
+    name: 'Anna Marie',
+    type: 'X-Men',
+    icon: 2,
+    iconImage: 'assets/rogue.png',
+    description:
+        'Armed with the ability to temporarily absorb others’ powers and memories, this Mississippi runaway started her career as a villain before joining the X-Men to fight for good.',
+    images: ['assets/carousel/rogue-1.png', 'assets/carousel/rogue-2.png', 'assets/carousel/rogue-3.png'],
+    url: ['https://www.marvel.com/characters/rogue'],
+  ),
+  MarvelInfos(
+    id: 31,
+    codeName: 'Colossus',
+    name: 'Piotr Rasputin',
+    type: 'X-Men',
+    icon: 2,
+    iconImage: 'assets/colossus.png',
+    description:
+        'A force to be reckoned with and yet a gentle giant wanting to protect others, the armored mutant Colossus brings strength to the heroic X-Men.',
+    images: ['assets/carousel/colossus-1.png', 'assets/carousel/colossus-2.png', 'assets/carousel/colossus-3.png'],
+    url: ['https://www.marvel.com/characters/colossus-piotr-rasputin'],
+  ),
+  MarvelInfos(
+    id: 32,
+    codeName: 'Nightcrawler',
+    name: 'Kurt Wagner',
+    type: 'X-Men',
+    icon: 2,
+    iconImage: 'assets/night-crawler.png',
+    description: 'Kurt Wagner is a demonic-looking mutant with teleporting abilities, being known as the soft-hearted X-Man Nightcrawler.',
+    images: ['assets/carousel/night-crawler-1.png', 'assets/carousel/night-crawler-2.png', 'assets/carousel/night-crawler-3.png'],
+    url: ['https://www.marvel.com/characters/nightcrawler'],
+  ),
+  MarvelInfos(
+    id: 33,
+    codeName: 'Magneto',
+    name: 'Max Eisenhardt',
+    type: 'X-Men/Villains',
+    icon: 5,
+    iconImage: 'assets/magneto.png',
+    description:
+        'Harnessing his powerful magnetic abilities, he has become a radical freedom fighter in the name of his kind. His only priority is the preservation of the mutant race—even at the expense of what some might deem to be the greater good.',
+    images: ['assets/carousel/magneto-1.png', 'assets/carousel/magneto-2.png', 'assets/carousel/magneto-3.png'],
+    url: ['https://www.marvel.com/characters/magneto-max-eisenhardt'],
+  ),
+  MarvelInfos(
+    id: 34,
+    codeName: 'Loki',
+    type: 'Villains',
+    icon: 4,
+    iconImage: 'assets/loki.png',
+    description:
+        'Loki, Prince of Asgard, Odinson, rightful heir of Jotunheim, and God of Mischief, is burdened with glorious purpose. His desire to be a king drives him to sow chaos in Asgard. In his lust for power, he extends his reach to Earth.',
+    images: ['assets/carousel/loki-1.png', 'assets/carousel/loki-2.png', 'assets/carousel/loki-3.png'],
+    url: ['https://www.marvel.com/characters/loki'],
+  ),
+  MarvelInfos(
+    id: 35,
+    codeName: 'Thanos',
+    type: 'Villains',
+    icon: 4,
+    iconImage: 'assets/thanos.png',
+    description:
+        'The Mad Titan Thanos quests across the universe in search of the Infinity Stones, intending to use their limitless power for shocking purposes.',
+    images: ['assets/carousel/thanos-1.png', 'assets/carousel/thanos-2.png', 'assets/carousel/thanos-3.png'],
+    url: ['https://www.marvel.com/characters/thanos'],
+  ),
+  MarvelInfos(
+    id: 36,
+    codeName: 'M.O.D.O.K',
+    type: 'Villains',
+    icon: 4,
+    iconImage: 'assets/modok.png',
+    description:
+        'Created by A.I.M., the Mental Organism Designed Only for Killing uses his mind powers and incredible intellect to live up to his name.',
+    images: ['assets/carousel/modok-1.png', 'assets/carousel/modok-2.png', 'assets/carousel/modok-3.png'],
+    url: ['https://www.marvel.com/characters/modok'],
+  ),
+  MarvelInfos(
+    id: 37,
+    codeName: 'Venom',
+    name: 'Eddie Brock',
+    type: 'Villains',
+    icon: 4,
+    iconImage: 'assets/venom.png',
+    description: 'Bonding with an unearthly symbiote, Eddie Brock is given amazing powers and an unstable psyche.',
+    images: ['assets/carousel/venom-1.png', 'assets/carousel/venom-2.png', 'assets/carousel/venom-3.png'],
+    url: ['https://www.marvel.com/characters/venom-eddie-brock'],
+  ),
+  MarvelInfos(
+    id: 38,
+    codeName: 'Carnage',
+    name: 'Cletus Kasady',
+    type: 'Villains',
+    icon: 4,
+    iconImage: 'assets/carnage.png',
+    description: 'The unstable and nightmarish Carnage causes chaos wherever he goes and always leaves a bloody trail of bodies behind him.',
+    images: ['assets/carousel/carnage-1.png', 'assets/carousel/carnage-2.png', 'assets/carousel/carnage-3.png'],
+    url: ['https://www.marvel.com/characters/carnage-cletus-kasady'],
+  ),
+  MarvelInfos(
+    id: 39,
+    codeName: 'Green Goblin',
+    name: 'Norman Osborn',
+    type: 'Villains',
+    icon: 4,
+    iconImage: 'assets/green-goblin.png',
+    description:
+        'Norman Osborn is the founder of Oscorp Technologies. After experimenting on himself with an unstable chemical, Norman developed an alternate, evil personality known as Green Goblin.',
+    images: ['assets/carousel/green-goblin-1.png', 'assets/carousel/green-goblin-2.png', 'assets/carousel/green-goblin-3.png'],
+    url: ['https://www.marvel.com/characters/green-goblin-norman-osborn'],
+  ),
+  MarvelInfos(
+    id: 40,
+    codeName: 'Doctor Doom',
+    name: 'Victor Von Doom',
+    type: 'Villains',
+    icon: 4,
+    iconImage: 'assets/doctor-doom.png',
+    description:
+        'Victor Von Doom overcame his difficult childhood to become one of the world’s most brilliant scientists—though, at every turn, he saw his achievements outdone by a man called Reed Richards.',
+    images: ['assets/carousel/doctor-doom-1.png', 'assets/carousel/doctor-doom-2.png', 'assets/carousel/doctor-doom-3.png'],
+    url: ['https://www.marvel.com/characters/doctor-doom-victor-von-doom'],
+  ),
 ];
